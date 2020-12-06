@@ -12,6 +12,10 @@ var bodyParser = require('body-parser')
 var app = express()
 
 
+// __dirname：当前脚本路径，join：拼接路径
+app.set('views', path.join(__dirname, 'views'));
+
+
 
 
 // 交由路由处理
