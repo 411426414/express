@@ -28,6 +28,17 @@ router.post('/login', function (req, res) {
   }
 })
 
+router.get('/redirects', function (req, res) {
+  // res.send("我是操作重定向的方法")
+  var session = res.session;
+  if (session.uniqueId == 'admin') {
+    res.redirect('/home');
+  }else{
+    // res.redirect('login')
+    res.send('登录出错,<a href="login">重新登陆</a>');
+  }
+})
+
 
 // 公开接口
 module.exports = router;
