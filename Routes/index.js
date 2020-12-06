@@ -39,6 +39,18 @@ router.get('/redirects', function (req, res) {
   }
 })
 
+router.get('/home',function(req,res){
+  // res.send('我是首页');
+  var session = req.session;
+  if (session.uniqueId == 'admin') {
+    res.send('我是首页,<a href="logout">推出登陆</a>');
+  }else{
+    // res.redirect('login')
+    res.send('登录出错,<a href="login">重新登陆</a>');
+  }
+})
+
+
 
 // 公开接口
 module.exports = router;
