@@ -3,6 +3,9 @@ var express = require('express')
 var routes = require('./Routes/index')
 // 引用path模块
 var path = require('path')
+// 引用session模块
+var session = require('express-session')
+
 
 // 生成express对象
 var app = express()
