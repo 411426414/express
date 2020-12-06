@@ -1,8 +1,14 @@
 var express = require('express')
 // 引用路由模块
 var routes = require('./Routes/index')
+// 引用path模块
+var path = require('path')
+
 // 生成express对象
 var app = express()
+
+
+
 
 // 交由路由处理
 app.use('/', routes)
