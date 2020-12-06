@@ -5,7 +5,8 @@ var routes = require('./Routes/index')
 var path = require('path')
 // 引用session模块
 var session = require('express-session')
-
+// 引用body-parser模块
+var bodyParser = require('body-parser')
 
 // 生成express对象
 var app = express()
