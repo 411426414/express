@@ -14,6 +14,9 @@ var app = express()
 
 // __dirname：当前脚本路径，join：拼接路径
 app.set('views', path.join(__dirname, 'views'));
+// 引用ejs模块，并使用读取方法
+// require('ejs').__express === require('ejs').readerFile
+app.engine('html', require('ejs').__express)
 
 
 
