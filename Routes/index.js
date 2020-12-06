@@ -51,6 +51,11 @@ router.get('/home',function(req,res){
 })
 
 
+router.get('logout',function(req,res){
+  // 销毁session
+  req.session.destroy();
+  res.redirect('login');
+})
 
 // 公开接口
 module.exports = router;
