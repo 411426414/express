@@ -40,6 +40,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}))
 
 
+// 设置静态文件夹
+app.use(express.static(path.join(__dirname, 'public')));
 
 // 交由路由处理
 app.use('/', routes)
