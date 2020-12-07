@@ -18,6 +18,14 @@ app.set('views', path.join(__dirname, 'views'));
 // require('ejs').__express === require('ejs').readerFile
 app.engine('html', require('ejs').__express)
 
+// 设置后缀名
+// res.render('index') === res.render('index')
+// express默认使用的引擎是jade
+app.set('view engine', 'html');
+
+
+
+
 
 
 
