@@ -35,7 +35,9 @@ app.use(session({
 }))
 
 
-
+// bodyParser
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}))
 
 
 
