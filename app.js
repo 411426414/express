@@ -24,6 +24,16 @@ app.engine('html', require('ejs').__express)
 app.set('view engine', 'html');
 
 
+// session
+app.use(session({
+  secret: 'abcdefghijklmnopqrstuvwxyz128',
+  cookie: { maxAge: 1000 * 60 *30 },
+  // 每次更新
+  resave: true,
+  // 强制保存为初始化的session
+  saveUninitialized: true
+}))
+
 
 
 
